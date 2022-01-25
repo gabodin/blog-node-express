@@ -1,0 +1,9 @@
+<%- include('partials/header'); %> 
+    <h1> Posts </h1>
+    <% posts.forEach(post => { %>
+        <h3> <%= post.title %> </h3>
+        <p>
+            <%= post.body.substring(0, 100) + " ..."  %> 
+        </p>
+    <% }); %>
+<%- include('partials/footer'); %> 
