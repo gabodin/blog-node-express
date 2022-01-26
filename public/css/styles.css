@@ -42,3 +42,15 @@
 .publish-btn {
     margin: 2rem auto;
 }
+
+.compose-btn {
+    position: fixed;
+    bottom: 9%;
+    right: 2%;
+    padding: 1%;
+}
+
+.brand {
+    text-decoration: none;
+    
+}
