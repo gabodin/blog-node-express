@@ -3,7 +3,9 @@
     <% posts.forEach(post => { %>
         <h3> <%= post.title %> </h3>
         <p>
-            <%= post.body.substring(0, 100) + " ..."  %> 
+            <%= post.body.substring(0, 50) + " ... "  %>
+            <a href="/posts/<%= post.title %>"> Read more</a> 
         </p>
     <% }); %>
+    <!-- <a href="/compose" class="compose-btn btn btn-primary"> Compose</a> -->
 <%- include('partials/footer'); %> 
