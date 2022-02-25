@@ -1,12 +1,21 @@
 
-module.exports.Post = function(title, body) {
-    this.title = title;
-    this.body = body;
-}; 
+const { default: mongoose } = require("mongoose");
 
-// class Post {    
-//     constructor(title, body) {
-//         this.title = title;
-//         this.body = body;
-//     }
-// };
+const postSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        minlength: 1,
+        required: true,
+    },
+    body: {
+        type: String,
+        minlength: 1,
+        required: true,
+    }
+})
+
+const Posts = mongoose.model("posts", postSchema);
+
+module.exports = {
+    Posts: Posts
+};
